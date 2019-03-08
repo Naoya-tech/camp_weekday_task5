@@ -29,5 +29,7 @@ module FortunetellingsHelper
                       end
   end
 
-  
+  def valid
+    Date.today.strftime("%Y%m%d").to_i >= @birthday.to_i && Date.valid_date?(@year.to_i, @month.to_i, @day.to_i) && @birthday.length == 8 
+  end
 end
