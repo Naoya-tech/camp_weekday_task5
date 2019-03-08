@@ -9,6 +9,8 @@ class FortunetellingsController < ApplicationController
     
     
     
-    
+    if Date.today.strftime("%m%d") == @birthday[4,4]
+      @message = "今日があなたの誕生日です。"
+    end
   end
 end
